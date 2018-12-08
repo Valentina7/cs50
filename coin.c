@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
@@ -12,7 +13,7 @@ int main(void)
     }
     while (change1 < 0);
 
-    int change2 = (change1*100);
+    int change2 = roundf(change1*100);
 
     int coin = 0;
 
@@ -24,7 +25,7 @@ int main(void)
 
     while (change2 >= 10)
     {
-        change2= change2-10;
+        change2 = change2-10;
         coin++;
     }
 
